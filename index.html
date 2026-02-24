@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitações Internas</title>
+</head>
+<body>
+    <h1>Solicitações Registradas</h1>
+    <ul>
+        {% for s in solicitacoes %}
+            <li><strong>{{ s.titulo }}</strong> - {{ s.descricao }} (Status: {{ s.status }})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Criar Nova Solicitação</h2>
+    <form id="formSolicitacao">
+        <label>Título:</label><br>
+        <input type="text" id="titulo"><br><br>
+        <label>Descrição:</label><br>
+        <textarea id="descricao"></textarea><br><br>
+        <button type="button" onclick="enviar()">Enviar</button>
+    </form>
+
+    <script>
+        async function enviar() {
+            const titulo = document.getElementById("titulo").value;
+            const descricao = document.getElementById("descricao").value;
+
+            const response = await fetch("/solicitacoes", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({titulo, descricao})
+            });
+
+            if (response.ok) {
+                alert("Solicitação criada com sucesso!");
+                location.reload();
+            } else {
+                const erro = await response.json();
+                alert("Erro: " + erro.erro);
+            }
+        }
+    </script>
+</body>
+</html>
