@@ -1,11 +1,9 @@
 gustavo vieira
-- **Turma/Turno:** [Ex.: TDS EAD – Turma X]
-- **Data de entrega:** [dd/02/2026]
+- **Turma/Turno:** desenvovimento de sistemas/noite
+- **Data de entrega:** [24/02/2026]
 
 ## 2. Contexto do MVP
-Este projeto entrega um **MVP de solicitações internas** (ex.: manutenção/TI/suporte), com
-**API** para registro e acompanhamento de solicitações, **implantado em nuvem** e com
-**integração via API** com um serviço externo.
+Este projeto entrega um sftware de suporte, para registro e acompanhamento de solicitações, conta com um servidor local e um externo
 
 ## 3. Link da aplicação em nuvem
 https://trabalho-d-s-4.onrender.com
@@ -18,19 +16,18 @@ status: offiline
 ### Integridade
 - tudo está funcionando corretamente, porem a aplicação na nuvem não foi possivel
 ### Usabilidade (técnica)
-- tudo está funcionando corretamente, porem a aplicação na nuvem não foi possivel
+- o servidor local está funcionando corretamente, porem na nuvem esta dando falha
 ### Segurança da informação
 - tudo está funcionando corretamente, porem a aplicação na nuvem não foi possivel
 
   ## 5. Tecnologias e justificativas
 - **Linguagem/Runtime:** Python
 - **Framework:** flask
-- **Bibliotecas relevantes:** flask
-- **Banco/Persistência:** [ex.: PostgreSQL / SQLite / arquivo / serviço gerenciado]
-- **Nuvem/Deploy:** [ex.: serviço de app / container / etc.]
+- **Bibliotecas relevantes:** flask,  request, jsonify, render_template
+- **Nuvem/Deploy:** https://trabalho-d-s-4.onrender.com
 - **Justificativa vinculada aos RNFs:**
- - [Tecnologia X] foi escolhida porque atende a [RNF ...] por meio de [...].
-
+ - eu usei o flask por ser framework de facil utilização
+   
    ## 6. Integração via API (o que foi integrado)
 o api oferce uma comunicação entre cliente e servidor onde sera possivel fazer uma solicitação
 
@@ -48,5 +45,5 @@ runtime
 
 ### Passos
 1. [clicar em "start debugging"]
-2. [selecionar a]
-3. [comando 3]
+2. [o sistema processa de codificação]
+3. [vai gerar a url]
